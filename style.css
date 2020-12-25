@@ -149,6 +149,15 @@ article p{
     color: #caad00;
 }
 
+.nav > ul> li::selection {
+    background: transparent;
+}
+
+/*
+.nav > ul> li::-moz-selection {
+    background: transparent;
+}*/
+
 .nav .selectedItem{
     color: red;
 }
