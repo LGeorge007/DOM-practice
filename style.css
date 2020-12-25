@@ -1,9 +1,6 @@
 * {
     margin: 0;
     padding: 0;
-}
-
-* {
     box-sizing: border-box;
 }
 
@@ -11,10 +8,10 @@ body {
     background: url("img/background.jpg");
     background-size: cover;
     font-family: 'Kelly Slab', cursive;
+    overflow-x: hidden;
 }
 
 article {
-    color: #FFD700;
     margin: 2em 1em;
     padding: 0 2em;
     -webkit-transition: -webkit-transform .3s;
@@ -22,37 +19,40 @@ article {
     transition: transform .3s;
 }
 
-h1{
-    font-size: 1.6 em;
+article h1{
+    font-size: 1.6em;
     font-style: italic;
     text-align: center;
     font-weight: bold;
     margin-bottom: 0.1em;
+    color: #caad00;
 }
 
-h2{
-    font-size: 1.4 em;
+article h2{
+    font-size: 1.4em;
     font-style: italic;
     text-align: left;
     font-weight: bold;
-    padding-left: 4%;
+    padding-left: 2em;
     margin-bottom: 0.1em;
     margin-top: 0.3em;
+    color: #caad00;
 }
 
-p{
+article p{
     text-indent: 3.0em;
     margin-bottom: 1em;
+    text-align: left;
+    color: #FFD700;
 }
 
-img{
+.heroImg{
     display: block;
     padding: 20px;
     float: right;
     max-width: 100%;
     height: auto;
 }
-
 
 .nav {
     width: 320px;
@@ -63,20 +63,16 @@ img{
     bottom: 0;
     margin: 0;
 
-    color: #FFD700;
-    background: url("img/background.jpg");
-    background-size: cover;
 
     left: -320px;
     padding: 15px 20px;
 
     z-index: 2000;
-
+    /*
     -webkit-transition: left 0.3s;
-    -moz-transition: left 0.3s;
+    -moz-transition: left 0.3s;*/
     transition: left 0.3s;
 }
-
 
 .nav-toggle {
     position: absolute;
@@ -89,72 +85,70 @@ img{
     font-size: 2em;
     line-height: 1;
     z-index: 2001;
-}
-
-.nav-toggle:after {
-    content: '\2630';
     color: white;
 }
-
 
 [id='nav-toggle'] {
     position: absolute;
     display: none;
 }
 
-/*изменение положения переключателя при просмотре на мобильных устройствах когда навигация раскрыта, распологаем внутри панели */
 [id='nav-toggle']:checked ~ .nav > .nav-toggle {
     left: auto;
     right: 2px;
     top: 1em;
 }
 
-/*Когда флажок установлен, открывается панель используем псевдокласс:checked*/
 [id='nav-toggle']:checked ~ .nav {
     left: 0;
     overflow-y: auto;
 
     box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-    -moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
-    -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+    /*-moz-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);
+    -webkit-box-shadow:4px 0px 20px 0px rgba(0,0,0, 0.5);*/
 }
 
-/*смещение контента страницы на размер ширины панели*/
 [id='nav-toggle']:checked ~ main > article {
-    -webkit-transform: translateX(320px);
-    -moz-transform: translateX(320px);
+    /*-webkit-transform: translateX(320px);
+    -moz-transform: translateX(320px);*/
     transform: translateX(320px);
 }
 
 [id='nav-toggle']:checked ~ .nav > .nav-toggle:after {
     content: '\2715';
-    color: white;
 }
 
+.nav-toggle:after {
+    content: '\2630';
+}
 
-ul {
+.nav-toggle:hover {
+    color: #ff2400;
+}
+
+.nav > ul {
     display: block;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-li {
+.nav > ul> li {
     line-height: 2.5;
     cursor: pointer;
     list-style-type: none;
     padding: 5px;
 }
 
-li:hover{
+.nav > ul> li:hover{
     padding-left: 15px;
 }
 
-li{
+.nav > ul> li{
     font-size: 1.4em;
-    color: #FFD700;
+    color: #caad00;
 }
 
-.selectedItem{
+.nav .selectedItem{
     color: red;
 }
