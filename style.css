@@ -65,7 +65,7 @@ body {
 .content p{
     text-indent: 3.0em;
     margin-bottom: 1em;
-    text-align: left;
+    text-align: justify;
     color: #FFD700;
 }
 
