@@ -7,7 +7,7 @@
 body {
     background: url("img/background.jpg");
     background-size: cover;
-    font-family: 'Kelly Slab', cursive;
+    font-family: 'Kelly Slab', 'Play', cursive;
     overflow-x: hidden;
 }
 

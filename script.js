@@ -3,7 +3,6 @@ let startMenuPosition = 0;
 const content = document.querySelector(".content");
 const navPanel = document.querySelector(".nav");
 const menu = document.createElement("ul");
-//получаем button, чтобы навсить нанего клик.
 const button = document.querySelector(".menu-button");
 
 const listOfUnits = [
